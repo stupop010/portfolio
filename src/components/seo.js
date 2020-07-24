@@ -68,7 +68,12 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <link
+        href="https://fonts.googleapis.com/css2?family=Recursive:wght@900&family=Roboto+Mono:ital,wght@1,300;1,500&display=swap"
+        rel="stylesheet"
+      ></link>
+    </Helmet>
   )
 }
 
