@@ -1,10 +1,3 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
@@ -70,7 +63,7 @@ function SEO({ description, lang, meta, title }) {
       ].concat(meta)}
     >
       <link
-        href="https://fonts.googleapis.com/css2?family=Recursive:wght@900&family=Roboto+Mono:ital,wght@1,300;1,500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Recursive:wght@900&family=Roboto+Mono:ital,wght@1,300;1,500;1,700&display=swap"
         rel="stylesheet"
       ></link>
     </Helmet>
