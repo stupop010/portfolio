@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons"
 import {
   faLinkedin,
-  faGithubSquare,
   faTwitter,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons"
@@ -44,12 +43,20 @@ const Hero = () => {
         <div className="social-links">
           <ul>
             <li>
-              <a target="_blank" href="https://twitter.com/StuartDoney">
+              <a
+                target="_blank"
+                href="https://twitter.com/StuartDoney"
+                rel="noreferrer"
+              >
                 <FontAwesomeIcon icon={faTwitter} size="2x" />
               </a>
             </li>
             <li>
-              <a target="_blank" href="https://github.com/stupop010">
+              <a
+                target="_blank"
+                href="https://github.com/stupop010"
+                rel="noreferrer"
+              >
                 <FontAwesomeIcon icon={faGithub} size="2x" />
               </a>
             </li>
@@ -57,6 +64,7 @@ const Hero = () => {
               <a
                 target="_blank"
                 href="https://www.linkedin.com/in/stuart-doney-89569b164/"
+                rel="noreferrer"
               >
                 <FontAwesomeIcon icon={faLinkedin} size="2x" />
               </a>
