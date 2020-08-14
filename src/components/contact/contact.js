@@ -12,7 +12,7 @@ const Contact = () => {
         </div>
         <div className="form">
           <h5>Get in touch</h5>
-          <form data-netlify="true" name="contact" method="POST">
+          <form data-netlify="true" name="contact" method="POST" action="/">
             <div className="form-control">
               <label htmlFor="name" />
               <input type="text" id="name" placeholder="Name" />
