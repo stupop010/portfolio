@@ -6,7 +6,7 @@
 
 .contact-title {
   font-size: 3rem;
-  color: #e2d7d7;
+  color: $primaryWhite;
   text-align: center;
   text-transform: uppercase;
 
@@ -17,7 +17,7 @@
   hr {
     width: 90px;
     margin-top: 1rem;
-    border: 2px solid #e2d7d7;
+    border: 2px solid $primaryWhite;
   }
 }
 
@@ -28,9 +28,25 @@
   h5 {
     text-align: center;
     font-size: 1.5rem;
-    color: #e2d7d7;
+    color: $primaryWhite;
     margin: 2rem 0;
     text-transform: capitalize;
+  }
+
+  button {
+    margin-top: 0.2rem;
+    padding: 0.5rem 2rem;
+    font-size: 1.3rem;
+    color: $primaryWhite;
+    background-color: transparent;
+    border: 1px solid #5d465f;
+    transition: 0.4s;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $primaryPurple;
+      border-color: $primaryPurple;
+    }
   }
 }
 
@@ -38,12 +54,13 @@
   input,
   textarea {
     font-size: 1.3rem;
-    width: 100%;
+    width: 430px;
     margin-bottom: 0.4rem;
-    padding: 0.6rem 1rem;
+    padding: 0.6rem 0;
+    padding-left: 20px;
     border: 1px solid #5d465f;
     border-radius: 2px;
-    color: #e2d7d7;
+    color: $primaryWhite;
     background-color: transparent;
 
     &:focus,

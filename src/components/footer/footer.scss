@@ -1,0 +1,52 @@
+@import "../variables.scss";
+
+#footer {
+  padding: 50px 0;
+  background-color: #0b090c;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+
+  div {
+    margin: 0 0.8rem;
+    font-size: 1.6rem;
+    padding: 0.9rem;
+    background-color: #14141b;
+    color: $primaryWhite;
+    overflow: hidden;
+    border-radius: 2px;
+  }
+
+  a {
+    cursor: pointer;
+
+    &:hover div {
+      background-color: $primaryPurple;
+    }
+
+    &:hover div svg {
+      animation: toBottomFromTop 0.3s forwards;
+    }
+  }
+}
+
+.copyright {
+  margin-top: 1rem;
+  text-align: center;
+  color: $primaryWhite;
+}
+
+@keyframes toBottomFromTop {
+  49% {
+    transform: translateY(100%);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  51% {
+    opacity: 1;
+  }
+}

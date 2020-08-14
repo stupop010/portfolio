@@ -1,7 +1,7 @@
 @import "../variables.scss";
 
 #projects {
-  color: white;
+  color: $primaryWhite;
   background-color: rgba($color: #2a192b, $alpha: 1);
   border-top: 4px solid #ad59e0;
   border-bottom: 4px solid #ad59e0;
@@ -22,7 +22,7 @@
 .underline {
   width: 90px;
   margin-top: 1rem;
-  border: 2px solid #f5f5f5;
+  border: 2px solid $primaryWhite;
 }
 
 .cards-container {
