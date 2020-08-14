@@ -1,8 +1,10 @@
 @import "../variables.scss";
 
-.projects {
+#projects {
   color: white;
-  background-color: rgba($color: #0f0f0f, $alpha: 1);
+  background-color: rgba($color: #2a192b, $alpha: 1);
+  border-top: 4px solid #ad59e0;
+  border-bottom: 4px solid #ad59e0;
 }
 
 .projects-container {
@@ -108,6 +110,7 @@
 @media only screen and (max-width: 1700px) {
   .projects-container {
     width: 70%;
+    padding: 50px 0;
   }
 
   .cards-container {

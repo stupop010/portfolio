@@ -16,7 +16,7 @@ const Projects = () => {
   const projectCardDetails = cardDetails(barber, gym, movie, stockCli, blog)
 
   return (
-    <section className="projects">
+    <section id="projects">
       <div className="projects-container">
         <h2 className="title">Projects</h2>
         <hr className="underline" />

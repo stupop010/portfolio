@@ -1,7 +1,6 @@
 @import "../variables.scss";
 
-.about {
-  padding: 100px 0;
+#about {
   background-color: #d6d6d6;
   color: #222222;
   box-shadow: inset 0px 0px 12px 0px rgba(50, 50, 50, 0.65);
@@ -9,7 +8,6 @@
 
 .about-title {
   font-size: 3rem;
-  font-weight: 900;
   text-transform: capitalize;
   text-align: center;
   opacity: 0;
@@ -27,8 +25,6 @@
 }
 
 .content {
-  width: 1000px;
-  margin: auto;
   padding: 10px 0;
   display: flex;
 }
@@ -82,15 +78,10 @@
 }
 
 @media only screen and (max-width: 1100px) {
-  .about {
-    padding: 50px;
-  }
-
   .content {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 95%;
   }
 
   .my-self,
@@ -113,13 +104,9 @@
 }
 
 @media only screen and (max-width: 650px) {
-  .content {
-    width: 85%;
-  }
-
   .my-self,
   .skills {
-    width: 100%;
+    width: 90%;
   }
 
   .skills {

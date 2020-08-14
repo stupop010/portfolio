@@ -1,0 +1,59 @@
+@import "../variables.scss";
+
+#contact {
+  background-color: #14141b;
+}
+
+.contact-title {
+  font-size: 3rem;
+  color: #e2d7d7;
+  text-align: center;
+  text-transform: uppercase;
+
+  h2 {
+    font-family: $titleFamily;
+  }
+
+  hr {
+    width: 90px;
+    margin-top: 1rem;
+    border: 2px solid #e2d7d7;
+  }
+}
+
+.form {
+  width: 450px;
+  margin: 2rem auto 0;
+
+  h5 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #e2d7d7;
+    margin: 2rem 0;
+    text-transform: capitalize;
+  }
+}
+
+.form-control {
+  input,
+  textarea {
+    font-size: 1.3rem;
+    width: 100%;
+    margin-bottom: 0.4rem;
+    padding: 0.6rem 1rem;
+    border: 1px solid #5d465f;
+    border-radius: 2px;
+    color: #e2d7d7;
+    background-color: transparent;
+
+    &:focus,
+    &:active {
+      outline: none;
+    }
+  }
+
+  textarea {
+    height: 150px;
+    resize: none;
+  }
+}
