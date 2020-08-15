@@ -1,9 +1,17 @@
 // $primaryPurple: #cc005f;
 @import "../variables.scss";
 
-.hero {
+#home {
   min-height: 100vh;
   position: relative;
+}
+
+.header-fixed {
+  z-index: 4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-bottom: 2px solid $primaryPurple;
 }
 
 .hero-background {

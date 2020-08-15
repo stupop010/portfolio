@@ -1,5 +1,6 @@
 import React, { useState } from "react"
-import { navigate } from "gatsby-link"
+import { useInView } from "react-intersection-observer"
+import clsx from "clsx"
 
 import "./contact.scss"
 
@@ -18,13 +19,27 @@ const initialState = {
 
 const Contact = () => {
   const [values, setValues] = useState(initialState)
+  const [error, setError] = useState("")
+  const [msgSent, setMsgSent] = useState(false)
+
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  })
 
   const handleChange = e =>
     setValues({ ...values, [e.target.name]: e.target.value })
 
   const handleSubmit = e => {
     e.preventDefault()
+
+    if (!values.name || !values.email || !values.message) {
+      setMsgSent(false)
+      setError("Please fill in all fields")
+    }
+
     const form = e.target
+
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -33,19 +48,28 @@ const Contact = () => {
         ...values,
       }),
     })
-      .then(() => navigate(form.getAttribute("action")))
-      .catch(error => alert(error))
+      .then(() => {
+        setError("")
+        setMsgSent(true)
+        setValues(initialState)
+      })
+      .catch(error => {
+        setMsgSent(false)
+        setError(error)
+      })
   }
 
   return (
-    <section id="contact">
-      <div className="container">
+    <section id="contact" ref={ref}>
+      <div className={clsx("container", inView && "contact-in-view")}>
         <div className="contact-title">
           <h2>contact</h2>
           <hr />
         </div>
+        <h5 className="touch">Get in touch</h5>
         <div className="form">
-          <h5>Get in touch</h5>
+          {error && <div className="form-msg error">{error}</div>}
+          {msgSent && <div className="form-msg success">Message sent</div>}
           <form
             data-netlify="true"
             name="contact"
@@ -54,41 +78,43 @@ const Contact = () => {
             data-netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
           >
-            {/* <input type="hidden" name="form-name" value="contact" /> */}
             <div className="form-control">
-              <label htmlFor="name" />
-              <input
-                type="text"
-                id="name"
-                placeholder="Name"
-                name="name"
-                value={values.name}
-                onChange={handleChange}
-              />
+              <label htmlFor="name">
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Name"
+                  name="name"
+                  value={values.name}
+                  onChange={handleChange}
+                />
+              </label>
             </div>
             <div className="form-control">
-              <label htmlFor="email" />
-              <input
-                type="email"
-                id="email"
-                placeholder="Enter Email"
-                name="email"
-                value="email"
-                value={values.email}
-                onChange={handleChange}
-              />
+              <label htmlFor="email">
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Enter Email"
+                  name="email"
+                  value={values.email}
+                  onChange={handleChange}
+                />
+              </label>
             </div>
             <div className="form-control">
-              <label htmlFor="message" />
-              <textarea
-                type="text"
-                id="message"
-                placeholder="Message"
-                name="message"
-                value={values.message}
-                onChange={handleChange}
-              />
+              <label htmlFor="message">
+                <textarea
+                  type="text"
+                  id="message"
+                  placeholder="Message"
+                  name="message"
+                  value={values.message}
+                  onChange={handleChange}
+                />
+              </label>
             </div>
+
             <button type="submit">Submit</button>
           </form>
         </div>

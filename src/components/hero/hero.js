@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons"
 import {
@@ -27,7 +27,7 @@ const Hero = () => {
   )
 
   return (
-    <section className="hero">
+    <section id="home">
       <BackgroundImage
         className="hero-background"
         fluid={heroBackground.childImageSharp.fluid}
@@ -36,9 +36,9 @@ const Hero = () => {
           <h5>hello, world.</h5>
           <h1>i'm stuart doney</h1>
           <p>front-end developer</p>
-          <a>
+          <Link to="#about">
             more about me <FontAwesomeIcon icon={faAngleDown} />
-          </a>
+          </Link>
         </div>
         <div className="social-links">
           <ul>

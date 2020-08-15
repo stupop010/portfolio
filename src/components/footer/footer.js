@@ -1,5 +1,6 @@
 import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faAngleUp } from "@fortawesome/free-solid-svg-icons"
 import {
   faLinkedin,
   faTwitter,
@@ -9,8 +10,15 @@ import {
 import "./footer.scss"
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+
   return (
     <footer id="footer">
+      <div className="scroll-up" onClick={scrollToTop}>
+        <FontAwesomeIcon icon={faAngleUp} />
+      </div>
       <div>
         <ul className="footer-socials">
           <li>

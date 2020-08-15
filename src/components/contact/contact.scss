@@ -1,7 +1,9 @@
 @import "../variables.scss";
+@import "../animations.scss";
 
 #contact {
   background-color: #14141b;
+  overflow: hidden;
 }
 
 .contact-title {
@@ -12,26 +14,30 @@
 
   h2 {
     font-family: $titleFamily;
+    opacity: 0;
   }
 
   hr {
     width: 90px;
     margin-top: 1rem;
     border: 2px solid $primaryWhite;
+    opacity: 0;
   }
+}
+
+.touch {
+  text-align: center;
+  font-size: 1.5rem;
+  color: $primaryWhite;
+  margin: 2rem 0;
+  text-transform: capitalize;
+  opacity: 0;
 }
 
 .form {
   width: 450px;
   margin: 2rem auto 0;
-
-  h5 {
-    text-align: center;
-    font-size: 1.5rem;
-    color: $primaryWhite;
-    margin: 2rem 0;
-    text-transform: capitalize;
-  }
+  opacity: 0;
 
   button {
     margin-top: 0.2rem;
@@ -48,6 +54,23 @@
       border-color: $primaryPurple;
     }
   }
+}
+
+.form-msg {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  color: $primaryWhite;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.error {
+  background-color: #cc0000;
+}
+
+.success {
+  background-color: #0f580c;
 }
 
 .form-control {
@@ -72,5 +95,33 @@
   textarea {
     height: 150px;
     resize: none;
+  }
+}
+
+.contact-in-view {
+  h2 {
+    animation: titleSlideInLeft 0.3s ease-in 0.3s forwards;
+  }
+
+  hr,
+  h5 {
+    animation: slideInRight 0.3s ease-in 0.3s forwards;
+  }
+
+  .form {
+    animation: scaleIn 1s ease-in-out 0.5s forwards;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .form {
+    width: 90%;
+  }
+
+  .form-control {
+    input,
+    textarea {
+      width: calc(100% - 20px);
+    }
   }
 }

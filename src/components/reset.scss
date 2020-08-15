@@ -3,6 +3,7 @@
    License: none (public domain)
 */
 @import "./variables.scss";
+
 html,
 body,
 div,
@@ -91,6 +92,7 @@ video {
   font: inherit;
   vertical-align: baseline;
   font-family: $primaryFamily;
+  box-sizing: border-box;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -107,6 +109,12 @@ menu,
 nav,
 section {
   display: block;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 body {

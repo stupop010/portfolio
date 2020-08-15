@@ -1,4 +1,5 @@
 @import "../variables.scss";
+@import "../animations.scss";
 
 #about {
   background-color: #d6d6d6;
@@ -10,17 +11,18 @@
   font-size: 3rem;
   text-transform: capitalize;
   text-align: center;
-  opacity: 0;
   transition: 0.4s;
 
   h2 {
     font-family: $titleFamily;
+    opacity: 0;
   }
 
   hr {
     width: 90px;
     margin-top: 1rem;
     border: 2px solid #222222;
+    opacity: 0;
   }
 }
 
@@ -32,9 +34,6 @@
 .my-self {
   width: 50%;
   line-height: 1.2;
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: 0.4s;
 
   p {
     width: 470px;
@@ -44,16 +43,17 @@
   }
 }
 
+.from-right,
+.from-left {
+  opacity: 0;
+}
+
 .skills {
   width: 50%;
-  opacity: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  opacity: 0;
-  transform: translateX(100%);
-  transition: 0.4s;
 
   ul {
     margin-top: 1rem;
@@ -73,8 +73,18 @@
 }
 
 .on-screen {
-  opacity: 1;
-  transform: translateX(0);
+  h2 {
+    animation: titleSlideInLeft 0.3s ease-in 0.1s forwards;
+  }
+  hr {
+    animation: slideInLeft 0.3s ease-in 0.4s forwards;
+  }
+  .from-right {
+    animation: slideInLeft 0.3s ease-in 0.7s forwards;
+  }
+  .from-left {
+    animation: slideInRight 0.3s ease-in 0.7s forwards;
+  }
 }
 
 @media only screen and (max-width: 1100px) {

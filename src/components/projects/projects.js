@@ -1,5 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { useInView } from "react-intersection-observer"
+import clsx from "clsx"
 import BackgroundImage from "gatsby-background-image"
 import { faChrome, faGithub } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -12,12 +14,19 @@ const Projects = () => {
   const { barber, blog, gym, movie, stockCli, expenseTracker } = useStaticQuery(
     query
   )
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  })
 
   const projectCardDetails = cardDetails(barber, gym, movie, stockCli, blog)
 
   return (
     <section id="projects">
-      <div className="projects-container">
+      <div
+        className={clsx("projects-container", inView && "projects-on-screen")}
+        ref={ref}
+      >
         <h2 className="title">Projects</h2>
         <hr className="underline" />
         <div className="cards-container">
