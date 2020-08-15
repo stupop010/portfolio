@@ -3,7 +3,6 @@
 .header {
   width: 100%;
   background-color: rgba($color: #181717, $alpha: 1);
-  // box-shadow: 0px 2px 4px $primaryPurple;
   color: $primaryWhite;
 
   nav ul {
@@ -20,6 +19,30 @@
     &:hover {
       cursor: pointer;
       color: $primaryPurple;
+    }
+  }
+}
+
+.header-fixed {
+  z-index: 4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-bottom: 2px solid $primaryPurple;
+}
+
+@media only screen and (max-width: 450px) {
+  .header {
+    nav ul {
+      margin-left: 0;
+      width: 90%;
+      margin: auto;
+      justify-content: space-evenly;
+    }
+
+    nav ul li {
+      margin: 0.7rem 0.3rem;
+      font-size: 1rem;
     }
   }
 }
