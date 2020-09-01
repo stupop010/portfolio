@@ -1,11 +1,12 @@
 const cardDetails = (pic1, pic2, pic3, pic4, pic5, pic6) => {
   return [
     {
-      img: pic1,
-      title: "J.M Barber Shop Website",
-      txt: "A website built with Next.js and scss.",
-      demo: "https://jm-barber.vercel.app/",
-      source: "https://github.com/stupop010/jm_barber",
+      img: pic3,
+      title: "Movies DB",
+      txt:
+        "Get the latest information about your favorite movies, TV shows and celebrities. Built with React.js and data from TMDb",
+      demo: "https://movies-db.netlify.com/",
+      source: "https://github.com/stupop010/movie-db",
     },
     {
       img: pic2,
@@ -15,12 +16,11 @@ const cardDetails = (pic1, pic2, pic3, pic4, pic5, pic6) => {
       source: "https://github.com/stupop010/gym",
     },
     {
-      img: pic3,
-      title: "Movies DB",
-      txt:
-        "Get the latest information about your favorite movies, TV shows and celebrities. Built with React.js and data from TMDb",
-      demo: "https://movies-db.netlify.com/",
-      source: "https://github.com/stupop010/movie-db",
+      img: pic1,
+      title: "J.M Barber Shop Website",
+      txt: "A website built with Next.js and scss.",
+      demo: "https://jm-barber.vercel.app/",
+      source: "https://github.com/stupop010/jm_barber",
     },
     {
       img: pic4,

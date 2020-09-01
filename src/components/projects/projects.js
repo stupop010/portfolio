@@ -30,6 +30,57 @@ const Projects = () => {
         <h2 className="title">Projects</h2>
         <hr className="underline" />
         <div className="cards-container">
+          <div className="card">
+            <BackgroundImage
+              fluid={expenseTracker.childImageSharp.fluid}
+              className="card-bg"
+            >
+              <div className="upper-card">
+                <div className="in-development">
+                  <h3>Expense Tracker</h3>
+                  <p>
+                    Front-End tech: React, Apollo Client, Material-ui and D3
+                  </p>
+                  <p>Backend tech: Node.js, Apollo Server, MySql</p>
+                </div>
+              </div>
+              <div className="lower-card">
+                <div className="in-development">
+                  <ul>
+                    <li>
+                      <a
+                        href="https://competent-heyrovsky-6ce1fd.netlify.app/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <FontAwesomeIcon icon={faChrome} /> - Live Demo
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://github.com/stupop010/expense-tracker-2.0/tree/master/client"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <FontAwesomeIcon icon={faGithub} /> - Front-End Source
+                        Code
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://github.com/stupop010/expense-tracker-backend-2.0/tree/master/server"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <FontAwesomeIcon icon={faGithub} /> - Backend Source
+                        Code
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </BackgroundImage>
+          </div>
           {projectCardDetails.map(project => (
             <div className="card">
               <BackgroundImage
@@ -71,50 +122,6 @@ const Projects = () => {
               </BackgroundImage>
             </div>
           ))}
-          <div className="card">
-            <BackgroundImage
-              fluid={expenseTracker.childImageSharp.fluid}
-              className="card-bg"
-            >
-              <div className="upper-card">
-                <div className="in-development">
-                  <h3>Expense Tracker</h3>
-                  <p>
-                    Front-End tech: React, Apollo Client, Material-ui and D3
-                  </p>
-                  <p>Backend tech: Node.js, Apollo Server, MySql</p>
-                </div>
-              </div>
-              <div className="lower-card">
-                <div className="in-development">
-                  <h4> Currently in development</h4>
-                  <p>Source code still available</p>
-                  <ul>
-                    <li>
-                      <a
-                        href="https://github.com/stupop010/expense-tracker-2.0/tree/master/client"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <FontAwesomeIcon icon={faGithub} /> - Front-End Source
-                        Code
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://github.com/stupop010/expense-tracker-backend-2.0/tree/master/server"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <FontAwesomeIcon icon={faGithub} /> - Backend Source
-                        Code
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </BackgroundImage>
-          </div>
         </div>
       </div>
     </section>
