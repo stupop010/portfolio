@@ -23,7 +23,7 @@ const About = () => {
               <h3 className="subtitle">Hi, I'm Stuart. Nice to meet you.</h3>
               <p>
                 I'm a self learned developer. Highly motivated with a passion
-                about all things Web development. <br />
+                about all things web development. <br />
                 Front-end/Back-end
               </p>
             </div>
