@@ -37,6 +37,7 @@ const About = () => {
                 <li>Javascript</li>
                 <li>React</li>
                 <li>Node</li>
+                <li>PHP</li>
                 <li>SQL</li>
               </ul>
             </div>
