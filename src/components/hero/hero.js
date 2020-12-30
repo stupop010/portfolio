@@ -15,7 +15,7 @@ const Hero = () => {
   const { heroBackground } = useStaticQuery(
     graphql`
       query {
-        heroBackground: file(relativePath: { eq: "hero-background.jpg" }) {
+        heroBackground: file(relativePath: { eq: "hero-background-one.png" }) {
           childImageSharp {
             fluid(maxWidth: 1800) {
               ...GatsbyImageSharpFluid_withWebp

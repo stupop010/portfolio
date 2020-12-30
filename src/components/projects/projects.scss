@@ -8,12 +8,6 @@
   border-bottom: 4px solid #ad59e0;
 }
 
-.projects-container {
-  padding: 100px 0;
-  width: 1650px;
-  margin: auto;
-}
-
 .title {
   text-align: center;
   font-family: $titleFamily;
@@ -95,13 +89,13 @@
 }
 
 .card-container {
-  width: 60%;
+  width: 90%;
   margin: auto;
   overflow: hidden;
 }
 
 .in-development {
-  width: 70%;
+  width: 90%;
   margin: auto;
   font-size: 0.9rem;
   line-height: 1.3;

@@ -24,7 +24,7 @@ const Projects = () => {
   return (
     <section id="projects">
       <div
-        className={clsx("projects-container", inView && "projects-on-screen")}
+        className={clsx("container", inView && "projects-on-screen")}
         ref={ref}
       >
         <h2 className="title">Projects</h2>

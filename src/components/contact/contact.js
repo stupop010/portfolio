@@ -79,6 +79,16 @@ const Contact = () => {
           <hr />
         </div>
         <h5 className="touch">Get in touch</h5>
+        <div className="email">
+          <p>
+            Email me:
+            <a href="mailto:hello@stuartdoney.co.uk">
+              {" "}
+              hello@stuartdoney.co.uk
+            </a>
+          </p>
+          <p>or send me a message below</p>
+        </div>
         <div className="form">
           {error && <div className="form-msg error">{error}</div>}
           {msgSent && <div className="form-msg success">Message sent</div>}
