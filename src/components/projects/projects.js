@@ -30,6 +30,47 @@ const Projects = () => {
         <h2 className="title">Projects</h2>
         <hr className="underline" />
         <div className="cards-container">
+          {projectCardDetails.map(project => (
+            <div className="card">
+              <BackgroundImage
+                fluid={project.img.childImageSharp.fluid}
+                className="card-bg"
+              >
+                <div className="upper-card">
+                  <div className="card-container">
+                    <h3>{project.title}</h3>
+                    <p>{project.txt}</p>
+                  </div>
+                </div>
+                <div className="lower-card">
+                  <div className="card-container">
+                    <ul>
+                      {project.demo && (
+                        <li>
+                          <a
+                            href={project.demo}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            <FontAwesomeIcon icon={faChrome} /> - Live Demo
+                          </a>
+                        </li>
+                      )}
+                      <li>
+                        <a
+                          href={project.source}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <FontAwesomeIcon icon={faGithub} /> - Source Code
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </BackgroundImage>
+            </div>
+          ))}
           <div className="card">
             <BackgroundImage
               fluid={expenseTracker.childImageSharp.fluid}
@@ -81,47 +122,6 @@ const Projects = () => {
               </div>
             </BackgroundImage>
           </div>
-          {projectCardDetails.map(project => (
-            <div className="card">
-              <BackgroundImage
-                fluid={project.img.childImageSharp.fluid}
-                className="card-bg"
-              >
-                <div className="upper-card">
-                  <div className="card-container">
-                    <h3>{project.title}</h3>
-                    <p>{project.txt}</p>
-                  </div>
-                </div>
-                <div className="lower-card">
-                  <div className="card-container">
-                    <ul>
-                      {project.demo && (
-                        <li>
-                          <a
-                            href={project.demo}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <FontAwesomeIcon icon={faChrome} /> - Live Demo
-                          </a>
-                        </li>
-                      )}
-                      <li>
-                        <a
-                          href={project.source}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <FontAwesomeIcon icon={faGithub} /> - Source Code
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </BackgroundImage>
-            </div>
-          ))}
         </div>
       </div>
     </section>

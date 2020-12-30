@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { useInView } from "react-intersection-observer"
 import clsx from "clsx"
 
@@ -26,6 +26,18 @@ const Contact = () => {
     triggerOnce: true,
     threshold: 0.3,
   })
+
+  // Remove the Msg sent after 3 seconds
+  useEffect(() => {
+    let timer
+    if (msgSent) {
+      timer = setTimeout(() => setMsgSent(false), 3000)
+    }
+
+    return () => {
+      clearTimeout(timer)
+    }
+  }, [msgSent, setMsgSent])
 
   const handleChange = e =>
     setValues({ ...values, [e.target.name]: e.target.value })
