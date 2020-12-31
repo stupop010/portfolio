@@ -66,16 +66,6 @@ function SEO({ description, lang, meta, title }) {
         href="https://fonts.googleapis.com/css2?family=Recursive:wght@900&family=Roboto+Mono:ital,wght@1,300;1,500;1,700&display=swap"
         rel="stylesheet"
       ></link>
-      {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
-      <script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-E14X4ML2XP"
-      ></script>
-      <script>
-        window.dataLayer = window.dataLayer || []; function gtag()
-        {dataLayer.push(arguments)}; gtag('js', new Date()); gtag('config',
-        'G-E14X4ML2XP');
-      </script>
     </Helmet>
   )
 }
