@@ -1,3 +1,11 @@
+// Initialize dotenv
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`, // or '.env'
+})
+
+// And then you can use the config in gatsby-config.js
+const config = require("gatsby-plugin-config")
+
 module.exports = {
   siteMetadata: {
     title: `Stuart Doney`,
@@ -33,7 +41,7 @@ module.exports = {
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: [
-          "G-B4J9Z6MGP0", // Google Analytics / GA
+          process.env.GOOGLE_ANALYTICS, // Google Analytics / GA
         ],
       },
     },
@@ -41,7 +49,7 @@ module.exports = {
       resolve: `gatsby-plugin-gdpr-cookies`,
       options: {
         googleAnalytics: {
-          trackingId: "G-B4J9Z6MGP0",
+          trackingId: process.env.GOOGLE_ANALYTICS,
           // Setting this parameter is optional
           anonymize: true,
         },
@@ -51,6 +59,16 @@ module.exports = {
         // },
         // Defines the environments where the tracking should be available  - default is ["production"]
         environments: ["production", "development"],
+      },
+    },
+    // Contentful access
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        downloadLocal: true,
       },
     },
   ],

@@ -2,12 +2,8 @@ import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons"
-import {
-  faLinkedin,
-  faTwitter,
-  faGithub,
-} from "@fortawesome/free-brands-svg-icons"
 import BackgroundImage from "gatsby-background-image"
+import SocialLinks from "../social-links"
 
 import "./hero.scss"
 
@@ -40,37 +36,7 @@ const Hero = () => {
             more about me <FontAwesomeIcon icon={faAngleDown} />
           </Link>
         </div>
-        <div className="social-links">
-          <ul>
-            <li>
-              <a
-                target="_blank"
-                href="https://twitter.com/StuartDoney"
-                rel="noreferrer"
-              >
-                <FontAwesomeIcon icon={faTwitter} size="2x" />
-              </a>
-            </li>
-            <li>
-              <a
-                target="_blank"
-                href="https://github.com/stupop010"
-                rel="noreferrer"
-              >
-                <FontAwesomeIcon icon={faGithub} size="2x" />
-              </a>
-            </li>
-            <li>
-              <a
-                target="_blank"
-                href="https://www.linkedin.com/in/stuart-doney-89569b164/"
-                rel="noreferrer"
-              >
-                <FontAwesomeIcon icon={faLinkedin} size="2x" />
-              </a>
-            </li>
-          </ul>
-        </div>
+        <SocialLinks />
       </BackgroundImage>
     </section>
   )

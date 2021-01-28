@@ -1,0 +1,27 @@
+@import "../variables.scss";
+
+#blog-hero {
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.76);
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.76);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.76);
+
+  .blog-hero-background {
+    height: 500px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .blog-hero-content {
+    text-align: center;
+    color: white;
+    padding-top: 11rem;
+
+    h1 {
+      font-size: 5em;
+      font-family: $primaryFamily;
+      letter-spacing: 0.1rem;
+    }
+  }
+}

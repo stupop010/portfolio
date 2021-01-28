@@ -74,25 +74,25 @@
   }
 }
 
-.social-links {
-  position: absolute;
-  bottom: 50px;
-  right: 50%;
-  transform: translate(50%);
+// .social-links {
+//   position: absolute;
+//   bottom: 50px;
+//   right: 50%;
+//   transform: translate(50%);
 
-  ul {
-    display: flex;
-  }
+//   ul {
+//     display: flex;
+//   }
 
-  ul li {
-    margin: 1rem;
-    transition: 0.3s;
-    &:hover {
-      cursor: pointer;
-      color: $primaryPurple;
-    }
-  }
-}
+//   ul li {
+//     margin: 1rem;
+//     transition: 0.3s;
+//     &:hover {
+//       cursor: pointer;
+//       color: $primaryPurple;
+//     }
+//   }
+// }
 
 @media only screen and (max-width: 900px) {
   .hero-overlay {

@@ -3,9 +3,10 @@
 
 #projects {
   color: $primaryWhite;
-  background-color: rgba($color: #2a192b, $alpha: 1);
-  border-top: 4px solid #ad59e0;
-  border-bottom: 4px solid #ad59e0;
+  background-color: rgba($color: $primaryDarkPurple, $alpha: 1);
+  border-top: 4px solid $primaryLightPurple;
+  border-bottom: 4px solid $primaryLightPurple;
+  position: relative;
 }
 
 .title {
