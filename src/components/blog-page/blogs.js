@@ -10,14 +10,16 @@ const Blogs = ({ blogs }) => {
           <div className="blog-card col-md-3 col-sm-6 col-xs-12">
             <Img fixed={node.image.fixed} />
             <h3>
-              {/* <Link to={`/blog/${node.slug}`}>{node.blogTitle}</Link> */}
-              How to add default image to ACF image field
+              <Link to={`/blog/${node.slug}`}>{node.blogTitle}</Link>
             </h3>
-            <p>
-              Posted By: <b>{node.author}</b>
+            <p className="blog-author">
+              Posted By: <strong>{node.author}</strong>
             </p>
-            <p>exterp</p>
-            <p>{node.date}</p>
+            <p className="blog-excerpt">{node.excerpt}</p>
+            <Link to={`/blog/${node.slug}`} className="read-more">
+              Read More
+            </Link>
+            <p className="blog-date">{node.date}</p>
           </div>
         )
       })}

@@ -17,6 +17,7 @@ const blogPostsTemplate = ({ data, pageContext }) => {
       <BlogPage
         featuredBlogPost={featuredBlogPost.edges}
         paginationBlogPosts={paginationBlogPosts}
+        paginationData={pageContext}
       />
       {/* <BlogPagination
         blogs={blogs}
@@ -68,9 +69,7 @@ export const BlogListQuery = graphql`
               ...GatsbyContentfulFixed
             }
           }
-          blogContent {
-            raw
-          }
+          excerpt
         }
       }
     }

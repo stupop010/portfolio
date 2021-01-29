@@ -52,14 +52,51 @@
   .blogs {
     display: flex;
     flex-wrap: wrap;
+    line-height: 1.2;
 
     .blog-card {
-      // padding-top: 50px;
       padding: 50px 15px 0 15px;
+      width: 25%;
 
       h3 {
         margin: 0.7rem 0;
         font-size: 1.5em;
+      }
+
+      p {
+        margin-bottom: 0.7rem;
+      }
+
+      .blog-author {
+        font-size: 0.9em;
+      }
+
+      .blog-excerpt {
+        font-size: 1em;
+        min-height: 130px;
+        max-height: 130px;
+      }
+
+      .blog-date {
+        font-size: 0.8em;
+        margin-top: 0.7rem;
+      }
+
+      .read-more {
+        padding: 0.2rem 0.6rem;
+        border: 1px solid $primaryPurple;
+        color: $primaryPurple;
+        transition: all 0.3s;
+
+        &:hover {
+          background-color: $primaryPurple;
+          color: $primaryWhite;
+        }
+      }
+
+      strong {
+        font-weight: 700;
+        text-transform: capitalize;
       }
     }
   }
