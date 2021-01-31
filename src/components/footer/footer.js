@@ -56,7 +56,7 @@ const Footer = () => {
           </li>
         </ul>
         <div className="copyright">
-          STUART DONEY <span>&copy;2020</span>
+          STUART DONEY <span>&copy;2021</span>
         </div>
       </div>
     </footer>

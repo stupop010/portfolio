@@ -19,11 +19,6 @@ const blogPostsTemplate = ({ data, pageContext }) => {
         paginationBlogPosts={paginationBlogPosts}
         paginationData={pageContext}
       />
-      {/* <BlogPagination
-        blogs={blogs}
-        numBlogPages={numBlogPages}
-        currentPage={currentPage}
-      /> */}
     </Layout>
   )
 }
