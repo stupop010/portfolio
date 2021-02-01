@@ -12,7 +12,7 @@ const blogPostsTemplate = ({ data, pageContext }) => {
   return (
     <Layout>
       <SEO title="Blog" />
-      <Header />
+      <Header height={50} />
       <BlogHero />
       <BlogPage
         featuredBlogPost={featuredBlogPost.edges}
@@ -37,13 +37,14 @@ export const BlogListQuery = graphql`
           author
           blogTitle
           image {
-            fixed(width: 620, height: 330) {
-              ...GatsbyContentfulFixed
+            fluid(maxWidth: 620, maxHeight: 330) {
+              ...GatsbyContentfulFluid
             }
           }
           blogContent {
             raw
           }
+          id
         }
       }
     }
@@ -60,11 +61,12 @@ export const BlogListQuery = graphql`
           author
           blogTitle
           image {
-            fixed(width: 285, height: 190) {
-              ...GatsbyContentfulFixed
+            fluid(maxWidth: 285, maxHeight: 190) {
+              ...GatsbyContentfulFluid
             }
           }
           excerpt
+          id
         }
       }
     }

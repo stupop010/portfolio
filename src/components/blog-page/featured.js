@@ -10,16 +10,21 @@ const Featured = ({ featured }) => {
   const text = documentToPlainTextString(JSON.parse(featured.blogContent.raw))
   const readTime = readingTime(text)
   const featuredSplit = featured.excerpt || text.substr(1, 400)
+
   return (
     <div className="featured-blog">
       <div className="featured-img">
-        <Img fixed={featured.image.fixed} />
+        <Img fluid={featured.image.fluid} />
       </div>
       <div className="featured-content">
         <div>
           <h2>{featured.blogTitle}</h2>
+          <p>{readTime.text}</p>
           <p>
-            {featuredSplit}... <Link to={"/blog/test-test"}>Read more</Link>
+            {featuredSplit}...{" "}
+            <span>
+              <Link to={`/blog/${featured.slug}`}>Read more</Link>
+            </span>
           </p>
         </div>
         <div className="featured-details">

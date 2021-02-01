@@ -1,8 +1,7 @@
 import React from "react"
-import { graphql, useStaticQuery, Link } from "gatsby"
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons"
+import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
 import SocialLinks from "../social-links"
 
 import "./blog-hero.scss"

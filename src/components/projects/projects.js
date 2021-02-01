@@ -30,8 +30,8 @@ const Projects = () => {
         <h2 className="title">Projects</h2>
         <hr className="underline" />
         <div className="cards-container">
-          {projectCardDetails.map(project => (
-            <div className="card">
+          {projectCardDetails.map((project, i) => (
+            <div className="card" key={i}>
               <BackgroundImage
                 fluid={project.img.childImageSharp.fluid}
                 className="card-bg"

@@ -4,9 +4,14 @@
   padding-top: 55px;
   width: $container-xxl;
   margin: auto;
+  padding-bottom: 5rem;
 
   .featured-blog {
     display: flex;
+  }
+
+  .featured-img {
+    width: 50%;
   }
 
   .featured-content {
@@ -15,6 +20,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 50%;
 
     h2 {
       font-size: 2em;
@@ -26,6 +32,7 @@
       line-height: 1.5;
 
       a {
+        display: inline-block;
         border: 1px solid $primaryPurple;
         color: $primaryPurple;
         padding: 0.1rem 0.5rem;
@@ -97,6 +104,138 @@
       strong {
         font-weight: 700;
         text-transform: capitalize;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1420px) {
+  .blog-page-container {
+    width: 90%;
+    .featured-blog {
+      .featured-content {
+        padding-top: 0;
+
+        h2 {
+          font-size: 1.4em;
+        }
+
+        p {
+          font-size: 0.9em;
+        }
+      }
+    }
+
+    .blogs {
+      .blog-card {
+        h3 {
+          font-size: 1.4em;
+        }
+
+        p {
+          margin-bottom: 0.9rem;
+        }
+
+        .blog-author {
+          font-size: 0.9em;
+          margin-bottom: 0.3rem;
+        }
+
+        .blog-excerpt {
+          font-size: 0.9em;
+          min-height: 110px;
+          max-height: 110px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .blog-page-container {
+    .blogs {
+      .blog-card {
+        width: calc(100% / 3);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1140px) {
+  .blog-page-container {
+    .featured-blog {
+      flex-direction: column;
+      align-items: center;
+
+      .featured-img {
+        width: 70%;
+      }
+      .featured-content {
+        width: 70%;
+        padding: 1rem 0 0 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .blog-page-container {
+    .blogs {
+      .blog-card {
+        width: calc(100% / 2);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .blog-page-container {
+    .featured-blog {
+      .featured-img {
+        width: 90%;
+      }
+      .featured-content {
+        width: 90%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  .blog-page-container {
+    .featured-blog {
+      .featured-content {
+        h2 {
+          font-size: 1.1em;
+        }
+
+        p {
+          font-size: 0.8em;
+          margin-top: 0.4rem;
+        }
+      }
+    }
+    .blogs {
+      .blog-card {
+        width: 100%;
+
+        h3 {
+          font-size: 1.1em;
+        }
+
+        p {
+          margin-bottom: 0.8rem;
+        }
+
+        .blog-author {
+          font-size: 0.8em;
+        }
+
+        .blog-excerpt {
+          font-size: 0.8em;
+          min-height: unset;
+          max-height: unset;
+        }
       }
     }
   }

@@ -4,11 +4,11 @@ import { Link } from "gatsby"
 
 const Blogs = ({ blogs }) => {
   return (
-    <div className="blogs row">
+    <div className="blogs">
       {blogs.map(({ node }) => {
         return (
-          <div className="blog-card col-md-3 col-sm-6 col-xs-12">
-            <Img fixed={node.image.fixed} />
+          <div className="blog-card" key={node.id}>
+            <Img fluid={node.image.fluid} />
             <h3>
               <Link to={`/blog/${node.slug}`}>{node.blogTitle}</Link>
             </h3>

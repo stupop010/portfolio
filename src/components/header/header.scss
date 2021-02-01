@@ -1,9 +1,11 @@
 @import "../variables.scss";
 
 .header {
+  display: block;
   width: 100%;
   background-color: rgba($color: #181717, $alpha: 1);
   color: $primaryWhite;
+  transition: all 0.3s;
 
   nav ul {
     display: flex;
@@ -31,7 +33,7 @@
   border-bottom: 2px solid $primaryPurple;
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 650px) {
   .header {
     nav ul {
       margin-left: 0;

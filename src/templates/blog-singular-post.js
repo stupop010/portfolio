@@ -23,6 +23,15 @@ export const query = graphql`
     contentfulBlogPost(slug: { eq: $slug }) {
       blogContent {
         raw
+        references {
+          ... on ContentfulMarkdownText {
+            contentful_id
+            __typename
+            markdownText {
+              markdownText
+            }
+          }
+        }
       }
       date(formatString: "MMMM DD YYYY")
       author

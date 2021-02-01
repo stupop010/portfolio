@@ -16,9 +16,11 @@ const BlogPage = ({
     <div className="blog-page-container">
       <Featured featured={featured} />
       <Blogs blogs={paginationBlogPosts.edges} />
-      <div>
-        <Pagination paginationData={paginationData} />
-      </div>
+      {paginationData.numBlogPages > 1 && (
+        <div>
+          <Pagination paginationData={paginationData} />
+        </div>
+      )}
     </div>
   )
 }

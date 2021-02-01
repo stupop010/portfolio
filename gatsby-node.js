@@ -1,11 +1,4 @@
 const path = require(`path`)
-// const readingTime = require("reading-time")
-// import { documentToPlainTextString } from "@contentful/rich-text-plain-text-renderer";
-// const {
-//   documentToPlainTextString,
-// } = require("@contentful/rich-text-plain-text-renderer")
-// import { renderRichText } from "gatsby-source-contentful/rich-text"
-// require("dotenv").config()
 
 // Log out information after a build is done
 exports.onPostBuild = ({ reporter }) => {
@@ -72,28 +65,3 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 }
-
-// exports.onCreateNode = async ({ node, actions, getNode, loadNodeContent }) => {
-//   const { createNodeField } = actions
-//   const { internal } = node
-
-//   const { owner, mediaType } = internal
-
-//   if (owner !== "gatsby-source-contentful") {
-//     return
-//   }
-
-//   const doc = JSON.parse(await loadNodeContent(node))
-
-//   const text = documentToPlainTextString(doc)
-
-//   // console.log(renderRichText(text), "hello")
-//   // if (node.internal.type === `MarkdownRemark`) {
-//   //   const value = createFilePath({ node, getNode })
-//   //   createNodeField({
-//   //     name: `slug`,
-//   //     node,
-//   //     value,
-//   //   })
-//   // }
-// }

@@ -8,16 +8,27 @@ const md = new MarkdownIt({
 })
 
 const CodeSnippet = ({ code }) => {
-  // console.log(props)
   useEffect(() => {
     Prism.highlightAll()
   })
 
-  return (
-    <div
-      dangerouslySetInnerHTML={{ __html: md.render(JSON.stringify(code)) }}
-    />
-  )
+  // If the contentful id === "2aDEqocqPUeOfzqJItCvE6"
+  // Its is a dummy embedded content
+  const Render = () => {
+    if (code.data.target.contentful_id !== "2aDEqocqPUeOfzqJItCvE6") {
+      return (
+        <div
+          dangerouslySetInnerHTML={{
+            __html: md.render(code.data.target.markdownText.markdownText),
+          }}
+        />
+      )
+    }
+
+    return null
+  }
+
+  return <Render />
 }
 
 export default CodeSnippet

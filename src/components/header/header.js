@@ -1,41 +1,51 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useCallback } from "react"
 import clsx from "clsx"
 import { Link } from "gatsby"
 
 import "./header.scss"
 
-const Header = () => {
+const Header = ({ height }) => {
   const [fixed, setFixed] = useState(false)
+
+  const handleScroll = useCallback(() => {
+    if (window.scrollY > height) setFixed(true)
+    if (window.scrollY < 10) setFixed(false)
+  }, [height])
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll)
 
     return () => window.addEventListener("scroll", handleScroll)
-  }, [])
-
-  const handleScroll = () => {
-    if (window.scrollY > 950) setFixed(true)
-    if (window.scrollY < 10) setFixed(false)
-  }
+  }, [handleScroll])
 
   return (
     <header className={clsx("header", fixed && "header-fixed")}>
       <nav>
         <ul>
           <li>
-            <Link to="/">home</Link>
+            <Link to="/" activeClassName="active">
+              home
+            </Link>
           </li>
           <li>
-            <Link to="/#about">about</Link>
+            <Link to="/#about" activeClassName="active">
+              about
+            </Link>
           </li>
           <li>
-            <Link to="/#projects">projects</Link>
+            <Link to="/#projects" activeClassName="active">
+              projects
+            </Link>
           </li>
           <li>
-            <Link to="/blogs">blog</Link>
+            <Link to="/blogs" activeClassName="active">
+              blog
+            </Link>
           </li>
           <li>
-            <Link to="/#contact">contact</Link>
+            <Link to="/#contact" activeClassName="active">
+              contact
+            </Link>
           </li>
         </ul>
       </nav>
