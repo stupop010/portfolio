@@ -21,6 +21,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: 50%;
+    font-family: $blogFamily;
 
     h2 {
       font-size: 2em;
@@ -60,6 +61,7 @@
     display: flex;
     flex-wrap: wrap;
     line-height: 1.2;
+    font-family: $blogFamily;
 
     .blog-card {
       padding: 50px 15px 0 15px;
@@ -137,12 +139,12 @@
         }
 
         .blog-author {
-          font-size: 0.9em;
+          font-size: 0.8em;
           margin-bottom: 0.3rem;
         }
 
         .blog-excerpt {
-          font-size: 1em;
+          font-size: 0.9em;
           min-height: 110px;
           max-height: 110px;
         }
@@ -206,11 +208,10 @@
     .featured-blog {
       .featured-content {
         h2 {
-          font-size: 1.1em;
+          font-size: 1.5em;
         }
 
         p {
-          font-size: 1em;
           margin-top: 0.4rem;
         }
       }
@@ -232,7 +233,7 @@
         }
 
         .blog-excerpt {
-          font-size: 1em;
+          font-size: 0.8em;
           min-height: unset;
           max-height: unset;
         }

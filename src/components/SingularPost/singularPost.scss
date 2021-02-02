@@ -3,11 +3,10 @@
 .blog-post-container {
   background-color: $primaryDarkPurple;
   line-height: 1.5;
-  font-family: "Times New Roman", Times, serif;
-  word-spacing: -0.3rem;
 
   .blog-post {
-    width: 800px;
+    font-family: $blogFamily;
+    width: 700px;
     margin: auto;
     padding: 3rem 0;
     color: $primaryWhite;
@@ -43,7 +42,7 @@
       width: 90%;
       overflow: hidden;
       line-height: 1.5;
-      font-size: 1em;
+      font-size: 1.1em;
 
       h1 {
         font-size: 1.8em;

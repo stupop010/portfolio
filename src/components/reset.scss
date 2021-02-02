@@ -91,10 +91,12 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  font-family: $primaryFamily;
   box-sizing: border-box;
 }
 
+body {
+  font-family: $primaryFamily;
+}
 /* HTML5 display-role reset for older browsers */
 
 article,
