@@ -31,6 +31,13 @@ export const query = graphql`
               markdownText
             }
           }
+          ... on ContentfulAsset {
+            contentful_id
+            __typename
+            fluid(quality: 100) {
+              ...GatsbyContentfulFluid
+            }
+          }
         }
       }
       date(formatString: "MMMM DD YYYY")

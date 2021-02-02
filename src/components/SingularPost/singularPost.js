@@ -20,12 +20,10 @@ const options = {
     [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
     [BLOCKS.CODE]: (node, children) => <code>{children}</code>,
     [BLOCKS.EMBEDDED_ASSET]: node => {
+      if (!node.data.target.fluid) return
       return (
         <>
-          <h2>Embedded Asset</h2>
-          <pre>
-            <code>{JSON.stringify(node, null, 2)}</code>
-          </pre>
+          <Img fluid={node.data.target.fluid} />
         </>
       )
     },
@@ -37,6 +35,7 @@ const options = {
 
 const SingularPost = ({ post }) => {
   const { blogContent, blogTitle, author, date, image } = post
+
   const text = documentToPlainTextString(JSON.parse(blogContent.raw))
   const readTime = readingTime(text)
 

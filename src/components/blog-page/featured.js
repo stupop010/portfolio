@@ -9,7 +9,7 @@ import "./blog-page.scss"
 const Featured = ({ featured }) => {
   const text = documentToPlainTextString(JSON.parse(featured.blogContent.raw))
   const readTime = readingTime(text)
-  const featuredSplit = featured.excerpt || text.substr(1, 400)
+  const featuredSplit = featured.excerpt || text.substr(0, 400)
 
   return (
     <div className="featured-blog">
