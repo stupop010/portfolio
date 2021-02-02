@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faAngleUp } from "@fortawesome/free-solid-svg-icons"
 import {
@@ -56,7 +57,12 @@ const Footer = () => {
           </li>
         </ul>
         <div className="copyright">
-          STUART DONEY <span>&copy;2021</span>
+          <p>
+            STUART DONEY <span>&copy;2021</span>
+          </p>
+          <p className="sitemap">
+            <Link to="/sitemap.xml">Sitemap</Link>
+          </p>
         </div>
       </div>
     </footer>

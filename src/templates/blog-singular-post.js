@@ -40,7 +40,7 @@ export const query = graphql`
           }
         }
       }
-      date(formatString: "MMMM DD YYYY")
+      date(formatString: "DD MMMM YYYY")
       author
       blogTitle
       image {
