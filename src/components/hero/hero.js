@@ -5,8 +5,6 @@ import { faAngleDown } from "@fortawesome/free-solid-svg-icons"
 import BackgroundImage from "gatsby-background-image"
 import SocialLinks from "../social-links"
 
-import "./hero.scss"
-
 const Hero = () => {
   const { heroBackground } = useStaticQuery(
     graphql`

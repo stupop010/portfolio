@@ -4,8 +4,6 @@ import clsx from "clsx"
 import { useInView } from "react-intersection-observer"
 import Img from "gatsby-image"
 
-import "./about.scss"
-
 const About = () => {
   const { profilePic } = useStaticQuery(
     graphql`
@@ -37,7 +35,10 @@ const About = () => {
           <div className={clsx("my-self", inView && "on-screen")}>
             <div className="from-right">
               <div className="profile-pic">
-                <Img fixed={profilePic.childImageSharp.fixed}></Img>
+                <Img
+                  fixed={profilePic.childImageSharp.fixed}
+                  alt="Stuart Doney"
+                ></Img>
               </div>
               <p>
                 Hi, I'm Stuart Doney. I'm a freelance web designer and
@@ -51,6 +52,7 @@ const About = () => {
             <div className="from-left">
               <h3 className="subtitle">My Skills</h3>
               <ul>
+                <li>WordPress</li>
                 <li>CSS</li>
                 <li>HTML</li>
                 <li>Javascript</li>

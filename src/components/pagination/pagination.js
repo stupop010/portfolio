@@ -1,8 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import "./pagination.scss"
-
 const Pagination = ({ paginationData }) => {
   const { currentPage, numBlogPages } = paginationData
   const isFirst = currentPage === 1

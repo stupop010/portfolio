@@ -2,8 +2,6 @@ import React, { useEffect, useState, useCallback } from "react"
 import clsx from "clsx"
 import { Link } from "gatsby"
 
-import "./header.scss"
-
 const Header = ({ height }) => {
   const [fixed, setFixed] = useState(false)
 

@@ -108,5 +108,14 @@ module.exports = {
           }),
       },
     },
+    // Robots.txt file
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://www.stuartdoney.co.uk",
+        sitemap: "https://www.stuartdoney.co.uk/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
   ],
 }

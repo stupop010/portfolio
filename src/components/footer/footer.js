@@ -8,8 +8,6 @@ import {
   faGithub,
 } from "@fortawesome/free-brands-svg-icons"
 
-import "./footer.scss"
-
 const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" })

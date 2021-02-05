@@ -2,8 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import CookieConsent from "react-cookie-consent"
 
-import "./reset.scss"
-import Footer from "./footer/footer"
+import Footer from "./footer"
 
 const Layout = ({ children }) => {
   return (

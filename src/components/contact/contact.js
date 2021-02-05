@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react"
 import { useInView } from "react-intersection-observer"
 import clsx from "clsx"
 
-import "./contact.scss"
-
 // Function from Netlify for the form
 function encode(data) {
   return Object.keys(data)
@@ -127,7 +125,6 @@ const Contact = () => {
             <div className="form-control">
               <label htmlFor="message">
                 <textarea
-                  type="text"
                   id="message"
                   placeholder="Message"
                   name="message"

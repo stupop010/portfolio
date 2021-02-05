@@ -8,8 +8,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import cardDetails from "./cardDetails"
 
-import "./projects.scss"
-
 const Projects = () => {
   const { barber, blog, gym, movie, stockCli, expenseTracker } = useStaticQuery(
     query

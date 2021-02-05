@@ -4,8 +4,6 @@ import BackgroundImage from "gatsby-background-image"
 
 import SocialLinks from "../social-links"
 
-import "./blog-hero.scss"
-
 const BlogHero = () => {
   const { blogHeroBackground } = useStaticQuery(
     graphql`

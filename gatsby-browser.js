@@ -1,3 +1,5 @@
+import "./src/asset/sass/index.scss"
+
 // You can delete this file if you're not using it
 export const onClientEntry = () => {
   // IntersectionObserver polyfill for gatsby-background-image (Safari, IE)

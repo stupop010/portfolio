@@ -4,8 +4,6 @@ import Img from "gatsby-image"
 import { documentToPlainTextString } from "@contentful/rich-text-plain-text-renderer"
 import readingTime from "reading-time"
 
-import "./blog-page.scss"
-
 const Featured = ({ featured }) => {
   const text = documentToPlainTextString(JSON.parse(featured.blogContent.raw))
   const readTime = readingTime(text)

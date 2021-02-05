@@ -7,8 +7,6 @@ import readingTime from "reading-time"
 
 import CodeSnippet from "./codeSnippet"
 
-import "./singularPost.scss"
-
 const Bold = ({ children }) => <span className="bold">{children}</span>
 const Text = ({ children }) => <p>{children}</p>
 

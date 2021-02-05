@@ -11,7 +11,7 @@ const Blogs = ({ blogs }) => {
 
         return (
           <div className="blog-card" key={node.id}>
-            <Img fluid={node.image.fluid} />
+            <Img fluid={node.image.fluid} alt={node.image.title} />
             <h3>
               <Link to={`/blog/${node.slug}`}>{node.blogTitle}</Link>
             </h3>

@@ -3,7 +3,6 @@ import React from "react"
 import Pagination from "../pagination"
 import Featured from "./featured"
 import Blogs from "./blogs"
-import "./blog-page.scss"
 
 const BlogPage = ({
   featuredBlogPost,

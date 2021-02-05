@@ -6,8 +6,6 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-import "./social-links.scss"
-
 const SocialLinks = () => (
   <div className="social-links">
     <ul>
