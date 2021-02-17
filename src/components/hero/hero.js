@@ -30,9 +30,7 @@ const Hero = () => {
           <h5>hello, world.</h5>
           <h1>i'm stuart doney</h1>
           <p>Web designer &#38; developer</p>
-          <Link to="#about">
-            more about me <FontAwesomeIcon icon={faAngleDown} size="sm" />
-          </Link>
+          <Link to="#about">more about me</Link>
         </div>
         <SocialLinks />
       </BackgroundImage>
