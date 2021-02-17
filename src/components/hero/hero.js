@@ -31,7 +31,7 @@ const Hero = () => {
           <h1>i'm stuart doney</h1>
           <p>Web designer &#38; developer</p>
           <Link to="#about">
-            more about me <FontAwesomeIcon icon={faAngleDown} />
+            more about me <FontAwesomeIcon icon={faAngleDown} size="sm" />
           </Link>
         </div>
         <SocialLinks />
