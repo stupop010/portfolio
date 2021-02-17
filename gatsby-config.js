@@ -117,5 +117,16 @@ module.exports = {
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        google: {
+          families: [
+            "Recursive Condensed:900",
+            "Roboto Mono Condensed:300,500,700:latin",
+          ],
+        },
+      },
+    },
   ],
 }
